@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:syncfusion="http://schemas.syncfusion.com/xamarin" xmlns:inputLsayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="InvernaderoApp.Views.HistoricoPage"
+             BackgroundColor="{AppThemeBinding Light={StaticResource light}, Dark=Black}"
+             xmlns:utils="clr-namespace:InvernaderoApp.Utils">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Histórico de datos" HorizontalOptions="CenterAndExpand" FontSize="Subtitle" FontAttributes="Bold" Margin="10" TextColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+
+            <inputLsayout:SfTextInputLayout x:Name="SfDpInicio" Hint="Fecha Inicio" ContainerType="Outlined" FocusedColor="{AppThemeBinding Light={StaticResource primary_dark}, Dark={StaticResource primary_light}}" UnfocusedColor="{AppThemeBinding Light={StaticResource primary_dark}, Dark={StaticResource primary_light}}" Margin="10">
+                <DatePicker x:Name="DpInicio" MinimumDate="01/01/2019"/>
+            </inputLsayout:SfTextInputLayout>
+
+            <inputLsayout:SfTextInputLayout x:Name="SfDpFin" Hint="Fecha Inicio" ContainerType="Outlined" FocusedColor="{AppThemeBinding Light={StaticResource primary_dark}, Dark={StaticResource primary_light}}" UnfocusedColor="{AppThemeBinding Light={StaticResource primary_dark}, Dark={StaticResource primary_light}}" Margin="10">
+                <DatePicker x:Name="DpFin" MinimumDate="01/01/2019"/>
+            </inputLsayout:SfTextInputLayout>
+
+            <SyncfusionButton:SfButton HorizontalOptions="Center" Text="Buscar" 
+                                                       EnableRippleEffect="True" 
+                                                       BackgroundColor="{StaticResource primary_dark}"
+                                                       TextColor="White"
+                                                       ShowIcon="True" CornerRadius="10"
+                                                       FontSize="18"
+                                                       HeightRequest="50">
+                <SyncfusionButton:SfButton.Image>
+                    <Image>
+                        <Image.Source>
+                            <FontImageSource FontFamily="FontLight" Glyph="{x:Static utils:FontLight.Search}" Color="White"></FontImageSource>
+                        </Image.Source>
+                    </Image>
+                </SyncfusionButton:SfButton.Image>
+            </SyncfusionButton:SfButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

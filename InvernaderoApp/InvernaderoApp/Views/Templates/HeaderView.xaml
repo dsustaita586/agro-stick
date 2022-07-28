@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InvernaderoApp.Views.Templates.HeaderView">
+    <ContentView.Content>
+        <AbsoluteLayout Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="150" BackgroundColor="{DynamicResource primary}">
+            <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Orientation="Vertical">
+                    <Label x:Name="lblNombre" Text="Nombre" TextColor="White" FontSize="Medium" Margin="5"></Label>
+                    <Label x:Name="lblUniversidad" Text="" TextColor="White" FontSize="Small" Margin="5"></Label>
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InvernaderoApp.Views.MenuShell"
+       xmlns:templates="clr-namespace:InvernaderoApp.Views.Templates"
+       xmlns:views="clr-namespace:InvernaderoApp.Views"
+       xmlns:utils="clr-namespace:InvernaderoApp.Utils" xmlns:SyncfusionButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       Shell.FlyoutBackdrop="rgba(92, 92, 92, 0.52)"
+       Shell.FlyoutHeaderTemplate="{StaticResource FlyoutHeaderTemplate}"
+       FlyoutBackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource dark}}"
+       Shell.BackgroundColor="{AppThemeBinding Light={StaticResource primary}, Dark={StaticResource dark_light}}">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="Gray"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#F0F0F0"/>
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource primary}, Dark={StaticResource dark_light}}" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+            </Style>
+
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Transparent" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{AppThemeBinding Light=Black, Dark={StaticResource text_dark}}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#d1d1d1, Dark={StaticResource dark_light}}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{AppThemeBinding Light=Black, Dark={StaticResource text_dark}}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <DataTemplate x:Key="FlyoutHeaderTemplate">
+                <templates:HeaderView Margin="0"></templates:HeaderView>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <ShellContent Title="Mediciones en tiempo real" ContentTemplate="{DataTemplate views:MedicionPage}">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontLight" Glyph="{x:Static utils:FontLight.TemperatureHot}" Color="{AppThemeBinding Light=Black, Dark=White}"></FontImageSource>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Title="Histórico" ContentTemplate="{DataTemplate views:HistoricoPage}">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontLight" Glyph="{x:Static utils:FontLight.ChartLine}" Color="{AppThemeBinding Light=Black, Dark=White}"></FontImageSource>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Title="Encender componentes" ContentTemplate="{DataTemplate views:EncenderPage}">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FontLight" Glyph="{x:Static utils:FontLight.ToggleOn}" Color="{AppThemeBinding Light=Black, Dark=White}"></FontImageSource>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <Shell.FlyoutFooter>
+        <StackLayout>
+            <SyncfusionButton:SfButton HorizontalOptions="Center" Text="Salir" 
+                                                       EnableRippleEffect="True" 
+                                                       BackgroundColor="Transparent" 
+                                                       TextColor="DarkRed"
+                                                       ShowIcon="True" CornerRadius="10"
+                                                       FontSize="18"
+                                                       HeightRequest="50">
+                <SyncfusionButton:SfButton.Image>
+                    <Image>
+                        <Image.Source>
+                            <FontImageSource FontFamily="FontLight" Glyph="{x:Static utils:FontLight.SignOut}" Color="{AppThemeBinding Light=DarkRed, Dark=DarkRed}"></FontImageSource>
+                        </Image.Source>
+                    </Image>
+                </SyncfusionButton:SfButton.Image>
+            </SyncfusionButton:SfButton>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+
+</Shell>
