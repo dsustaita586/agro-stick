@@ -6,6 +6,8 @@ CREATE TABLE tbl_usuario(
 	cveUsuario SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(150) NOT NULL,
     apellidos VARCHAR(450) NOT NULL,
+	username VARCHAR(45),
+	password VARCHAR(50),
     fechaRegistro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -35,14 +37,3 @@ CREATE TABLE tbl_ppm(
     fechaRegistro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-
-SELECT * FROM tbl_dispositivo;
-SELECT * FROM tbl_temperatura;
-SELECT * FROM tbl_humedad;
-SELECT * FROM tbl_ppm;
-
-
-SELECT DATE(fechaRegistro), SUM(temperatura) / COUNT(cveTemperatura)
-FROM tbl_temperatura
-WHERE DATE(fechaRegistro) BETWEEN '2022-07-13' AND '2022-07-22'
-GROUP BY DATE(fechaRegistro);
