@@ -4,8 +4,8 @@
 #include <PubSubClient.h>   // para conexión MQTT
 
 // variables para conexión a WIFI
-const char* ssid     = "NETWORK_AP";         // The SSID (name) of the Wi-Fi network you want to connect to
-const char* password = "D0W3N5A1N";     // The password of the Wi-Fi network
+const char* ssid     = "UTNG_CADES";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "CA2016DES";     // The password of the Wi-Fi network
 
 // Dirección del bloker MQTT
 const char* mqtt_server = "192.81.218.93";   // Red local (ifconfig en terminal) -> broker MQTT
@@ -16,7 +16,7 @@ const int dhtPin = 15;
 const byte mq135Pin = A0;
 const int greenPin = 12;
 const int redPin = 13;
-const int relePin = 5;
+const int relePin = 4;
 byte cont = 0;
 byte max_intentos = 50;
 int envioDatos = 0;
