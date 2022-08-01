@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes';
 import historicoRoutes from './routes/historicoRoutes';
+import dispositivoRoutes from './routes/dispositivoRoutes';
 
 class Server {
     public app: Application;
@@ -31,6 +32,7 @@ class Server {
     routes(): void {
         this.app.use("/api/auth", authRoutes);
         this.app.use("/api/historico", historicoRoutes);
+        this.app.use("/api/dispositivo", dispositivoRoutes);
     }
 
     start(): void {

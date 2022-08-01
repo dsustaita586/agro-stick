@@ -39,7 +39,7 @@ class AuthController {
 
                     var token = jwt.sign(newUser, keySecret.keys.secret, { expiresIn: '1h'});
                     
-                    return res.json({ message : "Autentificación correcta", token, code: 0 });
+                    return res.json({ message : "Autentificación correcta", cveUsuario: newUser.cveUsuario, nombre: newUser.nombre, apellidos: newUser.apellidos, username: newUser.username, code: 0 });
                 } else {
                     return res.status(404).json({ message : "El usuario y/o contraseña es incorrecto", code: 1});
                 }

@@ -16,7 +16,10 @@ namespace InvernaderoApp
 
             XF.Material.Forms.Material.Init(this);
 
-            MainPage = new LoginPage();
+            if (Application.Current.Properties.ContainsKey("usuario"))
+                MainPage = new MenuShell();
+            else
+                MainPage = new LoginPage();
         }
 
         protected override void OnStart()

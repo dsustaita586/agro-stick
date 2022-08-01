@@ -43,6 +43,7 @@ namespace InvernaderoApp.iOS
             Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
             Syncfusion.SfGauge.XForms.iOS.SfGaugeRenderer.Init();
             Syncfusion.XForms.iOS.Buttons.SfSwitchRenderer.Init();
+            Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
         }
     }
 }

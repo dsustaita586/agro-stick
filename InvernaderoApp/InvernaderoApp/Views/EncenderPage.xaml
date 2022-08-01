@@ -17,7 +17,7 @@
             <material:MaterialCard x:Name="CardVentilador" Margin="10" CornerRadius="10" Elevation="8" BackgroundColor="#ffbdbd">
                 <StackLayout>
                     <Label Text="Ventilador" HorizontalOptions="CenterAndExpand" FontSize="Small" FontAttributes="Bold" Margin="10" TextColor="#4a4949"/>
-                    <syncfusion:SfSwitch x:Name="SwEstado" VisualType="Cupertino" StateChanged="SwEstado_StateChanged">
+                    <syncfusion:SfSwitch x:Name="SwEstado" VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup  x:Name="CommonStates">
                                 <VisualState x:Name="Off">
@@ -32,6 +32,8 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                     </syncfusion:SfSwitch>
+
+                    <!--<material:MaterialSwitch x:Name="SwEstado" />-->
                 </StackLayout>
             </material:MaterialCard>
         </StackLayout>

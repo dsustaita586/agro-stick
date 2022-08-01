@@ -12,7 +12,7 @@ namespace InvernaderoApp.Utils
 {
     class Utilidades
     {
-        public const string API_URL = "";
+        public const string API_URL = "http://192.168.1.125:3000/api";
         private readonly static Utilidades _instancia = new Utilidades();
         public const string HOST = "proxy16.rt3.io";
         public const int PORT = 39480;
@@ -159,6 +159,16 @@ namespace InvernaderoApp.Utils
             }
 
             return respuesta;
+        }
+
+        public string GetRandomHex()
+        {
+            string color = "";
+
+            var random = new Random();
+            color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
+
+            return color;
         }
     }
 }

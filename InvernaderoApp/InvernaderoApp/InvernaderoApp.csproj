@@ -21,20 +21,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta1" />
     <PackageReference Include="OpenNETCF.MQTT" Version="1.0.17253" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
-    <PackageReference Include="Syncfusion.Licensing" Version="20.2.0.38" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="20.2.0.38" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="20.2.0.38" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.2.0.38" />
-    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="20.2.0.38" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="20.2.0.38" />
+    <PackageReference Include="Syncfusion.Licensing" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="20.2.0.40" />
     <PackageReference Include="System.Net.Mqtt" Version="0.6.16-beta" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="XF.Material" Version="1.8.0" />
   </ItemGroup>

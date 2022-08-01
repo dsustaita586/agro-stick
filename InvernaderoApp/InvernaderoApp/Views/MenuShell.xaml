@@ -74,7 +74,8 @@
                                                        TextColor="DarkRed"
                                                        ShowIcon="True" CornerRadius="10"
                                                        FontSize="18"
-                                                       HeightRequest="50">
+                                                       HeightRequest="50"
+                                       Clicked="BtnSalir_Clicked">
                 <SyncfusionButton:SfButton.Image>
                     <Image>
                         <Image.Source>
@@ -83,6 +84,7 @@
                     </Image>
                 </SyncfusionButton:SfButton.Image>
             </SyncfusionButton:SfButton>
+            <Label Text=""></Label>
         </StackLayout>
     </Shell.FlyoutFooter>
 

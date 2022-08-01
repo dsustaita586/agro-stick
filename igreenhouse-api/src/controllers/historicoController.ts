@@ -1,7 +1,5 @@
 import { Request, Response } from "express";
 import dao from "../dao/historicoDAO";
-import jwt from 'jsonwebtoken';
-import keySecret from "../config/keysSecret";
 import validator from 'validator';
 
 class HistoricoController {
