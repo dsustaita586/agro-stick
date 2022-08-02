@@ -1,6 +1,6 @@
 export default {
     database: {
-        host: '192.168.1.120',
+        host: '192.81.218.93',
         port: 3306,
         user: 'admin',
         password: 'admin',
