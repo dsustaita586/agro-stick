@@ -14,8 +14,8 @@ IPAddress server(192,81,218,93);             // Red local (ifconfig en terminal)
 // Constantes para conexiones a los pines de nodemcu
 const int dhtPin = 15;
 const byte mq135Pin = A0;
-const int greenPin = 12;
-const int redPin = 13;
+const int greenPin = 13;
+const int redPin = 12;
 const int relePin = 4;
 byte cont = 0;
 byte max_intentos = 50;
