@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms" xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material" xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="InvernaderoApp.Views.MedicionPage"
+             BackgroundColor="{AppThemeBinding Light={StaticResource light}, Dark=Black}">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Medición en tiempo real" HorizontalOptions="CenterAndExpand" FontSize="Subtitle" FontAttributes="Bold" Margin="10" TextColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+            
+            <!--GREEN : #83f296-->
+            <!--RED : #f28383-->
+            <material:MaterialCard x:Name="CardNotificacion" CornerRadius="8" Elevation="8" HorizontalOptions="FillAndExpand" Margin="10" BackgroundColor="#f2da83" >
+                <StackLayout>
+                    <Label x:Name="LblTitulo" Text="Conectandose..." FontAttributes="Bold" TextColor="#4a4949" />
+                    <Label x:Name="LblSubtitulo" Text="Tratando de conectarse, por favor espere" TextColor="#4a4949" />
+                </StackLayout>
+            </material:MaterialCard>
+
+            <Label Text="Los datos se actualizan cada 10 seg. de manera automática" HorizontalOptions="CenterAndExpand" FontSize="10" FontAttributes="Bold" Margin="2" TextColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+            
+            <ScrollView>
+                <StackLayout>
+                    <material:MaterialCard Elevation="4" CornerRadius="8" Margin="8"
+                                                   Background="{AppThemeBinding Light=White, Dark={StaticResource dark_light}}" 
+                                                   BorderColor="{AppThemeBinding Light=White, Dark={StaticResource dark_light}}">
+                        <StackLayout>
+                            <Label Text="Temperatura" FontSize="Subtitle" FontAttributes="Bold" Margin="10" TextColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+                            <gauge:SfCircularGauge>
+                                <gauge:SfCircularGauge.Scales>
+                                    <gauge:Scale LabelPostfix = "" StartValue="0" EndValue="100" Interval="10" LabelColor="{AppThemeBinding Light=Black, Dark=LightGray}">
+                                        <gauge:Scale.Ranges>
+                                            <gauge:Range StartValue = "0" EndValue = "35" Color = "#27beb7" Thickness = "10" Offset = "1" />
+                                            <gauge:Range StartValue = "35" EndValue = "75" Color = "#FFDD00" Thickness = "10" Offset = "1" />
+                                            <gauge:Range StartValue = "75" EndValue = "100" Color = "#F03E3E" Thickness = "10" Offset = "1" />
+                                        </gauge:Scale.Ranges>
+                                        <gauge:Scale.Pointers>
+                                            <gauge:NeedlePointer x:Name="ValorTemp" Value="0" Color="{AppThemeBinding Light=Black, Dark=LightGray}"/>
+                                        </gauge:Scale.Pointers>
+                                    </gauge:Scale>
+                                </gauge:SfCircularGauge.Scales>
+
+                                <gauge:SfCircularGauge.Headers>
+                                    <gauge:Header x:Name="LblValor" Text="0 °C" ForegroundColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+                                </gauge:SfCircularGauge.Headers>
+                            </gauge:SfCircularGauge>
+                        </StackLayout>
+                    </material:MaterialCard>
+
+                    <material:MaterialCard Elevation="4" CornerRadius="8" Margin="8"
+                                                   Background="{AppThemeBinding Light=White, Dark={StaticResource dark_light}}" 
+                                                   BorderColor="{AppThemeBinding Light=White, Dark={StaticResource dark_light}}">
+                        <StackLayout>
+                            <Label Text="Humedad" FontSize="Subtitle" FontAttributes="Bold" Margin="10" TextColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+                            <gauge:SfCircularGauge>
+                                <gauge:SfCircularGauge.Scales>
+                                    <gauge:Scale LabelPostfix = "" StartValue="0" EndValue="100" Interval="5" LabelColor="{AppThemeBinding Light=Black, Dark=LightGray}">
+                                        <gauge:Scale.Ranges>
+                                            <gauge:Range StartValue = "0" EndValue = "35" Color = "#27beb7" Thickness = "10" Offset = "1" />
+                                            <gauge:Range StartValue = "35" EndValue = "75" Color = "#FFDD00" Thickness = "10" Offset = "1" />
+                                            <gauge:Range StartValue = "75" EndValue = "100" Color = "#F03E3E" Thickness = "10" Offset = "1" />
+                                        </gauge:Scale.Ranges>
+                                        <gauge:Scale.Pointers>
+                                            <gauge:NeedlePointer x:Name="ValorHumedad" Value="0" Color="{AppThemeBinding Light=Black, Dark=LightGray}"/>
+                                        </gauge:Scale.Pointers>
+                                    </gauge:Scale>
+                                </gauge:SfCircularGauge.Scales>
+
+                                <gauge:SfCircularGauge.Headers>
+                                    <gauge:Header x:Name="LblValorHumedad" Text="0%" ForegroundColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+                                </gauge:SfCircularGauge.Headers>
+                            </gauge:SfCircularGauge>
+                        </StackLayout>
+                    </material:MaterialCard>
+
+                    <material:MaterialCard Elevation="4" CornerRadius="8" Margin="8"
+                                                   Background="{AppThemeBinding Light=White, Dark={StaticResource dark_light}}" 
+                                                   BorderColor="{AppThemeBinding Light=White, Dark={StaticResource dark_light}}">
+                        <StackLayout>
+                            <Label Text="Calidad del aire (PPM)" FontSize="Subtitle" FontAttributes="Bold" Margin="10" TextColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+                            <gauge:SfCircularGauge>
+                                <gauge:SfCircularGauge.Scales>
+                                    <gauge:Scale LabelPostfix = "" StartValue="0" EndValue="3000" Interval="200" LabelColor="{AppThemeBinding Light=Black, Dark=LightGray}">
+                                        <gauge:Scale.Ranges>
+                                            <gauge:Range StartValue = "0" EndValue = "1000" Color = "#27beb7" Thickness = "10" Offset = "1" />
+                                            <gauge:Range StartValue = "1001" EndValue = "2000" Color = "#FFDD00" Thickness = "10" Offset = "1" />
+                                            <gauge:Range StartValue = "2001" EndValue = "3000" Color = "#F03E3E" Thickness = "10" Offset = "1" />
+                                        </gauge:Scale.Ranges>
+                                        <gauge:Scale.Pointers>
+                                            <gauge:NeedlePointer x:Name="ValorPpm" Value="0" Color="{AppThemeBinding Light=Black, Dark=LightGray}"/>
+                                        </gauge:Scale.Pointers>
+                                    </gauge:Scale>
+                                </gauge:SfCircularGauge.Scales>
+
+                                <gauge:SfCircularGauge.Headers>
+                                    <gauge:Header x:Name="LblValorPpm" Text="0%" ForegroundColor="{AppThemeBinding Light=Black, Dark=LightGray}" />
+                                </gauge:SfCircularGauge.Headers>
+                            </gauge:SfCircularGauge>
+                        </StackLayout>
+                    </material:MaterialCard>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
