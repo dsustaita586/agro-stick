@@ -1,5 +1,5 @@
-# agro-stick
-Sistema de información geográfica y  base de datos  que permite el control de las plantaciones de agave azul o Agave tequilana
+# iGreenHouse
+Sistema de información para monitoreo y control de invernaderos de mediana tecnología 
 
 ## Versionado 📌
 
@@ -9,4 +9,5 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 * **Eric Domenzain** - *Developer* - [edomenzain](https://github.com/edomenzain)
 * **Daniel Sustaita** - *Developer* - [dsustaita586](https://github.com/dsustaita586)
+* ** María de la Luz Ortega Barrera* - [Luz-UTIM](https://github.com/Luz-UTIM/)
 
