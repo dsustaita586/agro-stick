@@ -12,10 +12,10 @@ namespace InvernaderoApp.Utils
 {
     class Utilidades
     {
-        public const string API_URL = "http://192.168.1.125:3000/api";
+        public const string API_URL = "http://192.81.218.93:3000/api";
         private readonly static Utilidades _instancia = new Utilidades();
-        public const string HOST = "proxy16.rt3.io";
-        public const int PORT = 39480;
+        public const string HOST = "192.81.218.93";
+        public const int PORT = 1883;
         
 
         public static Utilidades Instancia

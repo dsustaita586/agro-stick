@@ -14,9 +14,10 @@ IPAddress server(192,81,218,93);             // Red local (ifconfig en terminal)
 // Constantes para conexiones a los pines de nodemcu
 const int dhtPin = 15;
 const byte mq135Pin = A0;
-const int greenPin = 13;
-const int redPin = 12;
+const int greenPin = 12;
+const int redPin = 13;
 const int relePin = 4;
+const int relePinAux = 5;
 byte cont = 0;
 byte max_intentos = 50;
 int envioDatos = 0;
@@ -35,6 +36,7 @@ void setup() {
   pinMode(greenPin, OUTPUT);
   pinMode(redPin, OUTPUT);
   pinMode(relePin, OUTPUT);
+  pinMode(relePinAux, OUTPUT);
 
   // Conexión WIFI
   WiFi.begin(ssid, password);
@@ -70,6 +72,7 @@ void setup() {
   }
 
   digitalWrite(relePin, HIGH);
+  digitalWrite(relePinAux, HIGH);
   dht.begin();
 }
 
@@ -158,6 +161,7 @@ void callback(char* topic, byte* message, unsigned int length) {
 
       // encender relevador
       digitalWrite(relePin, LOW);
+      digitalWrite(relePinAux, LOW);
     }// fin del if (String(topic) == "esp32/output")
     else if(messageTemp == "false"){
       Serial.println("Led apagado");
@@ -165,6 +169,7 @@ void callback(char* topic, byte* message, unsigned int length) {
 
       // apagar rele
       digitalWrite(relePin, HIGH);
+      digitalWrite(relePinAux, HIGH);
     }// fin del else if(messageTemp == "false")
   }// fin del if (String(topic) == "esp32/output")
   
