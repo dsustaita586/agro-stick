@@ -85,6 +85,7 @@
                 </SyncfusionButton:SfButton.Image>
             </SyncfusionButton:SfButton>
             <Label Text=""></Label>
+            <Label Text=""></Label>
         </StackLayout>
     </Shell.FlyoutFooter>
 

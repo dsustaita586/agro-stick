@@ -27,6 +27,8 @@
                                     CacheDuration = "30" RetryCount = "5" RetryDelay = "450" DownsampleToViewSize = "true">
                         </ff:CachedImage>-->
 
+                        <Image Source="icon.png" HeightRequest="100" />
+
                         <inputLayout:SfTextInputLayout x:Name="SfTxtUsuario" Hint="Usuario" ContainerType="Outlined" FocusedColor="{AppThemeBinding Light={StaticResource primary_dark}, Dark={StaticResource primary_light}}" UnfocusedColor="{AppThemeBinding Light={StaticResource primary_dark}, Dark={StaticResource primary_light}}">
                             <Entry x:Name="TxtUsuario" TextColor="{AppThemeBinding Light=Black, Dark=White}" Text="" />
                         </inputLayout:SfTextInputLayout>
